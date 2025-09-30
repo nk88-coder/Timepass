@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(90deg, 
+    background: linear-gradient(90deg,
         #E40303, /* red */
         #FF8C00, /* orange */
         #FFED00, /* yellow */
@@ -12,21 +12,40 @@ body {
     );
     color: white;
     min-height: 100vh;
-    margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1.5rem 2rem 1rem 2rem;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 7px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.pride-banner {
+    background: repeating-linear-gradient(90deg, #E40303, #FF8C00 16%, #FFED00 33%, #008026 50%, #004DFF 67%, #750787 84%);
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 7px 7px 0 0;
+    margin-bottom: 0.5rem;
+    animation: prideGlow 3s infinite alternate;
+}
+@keyframes prideGlow {
+    0% { box-shadow: 0 0 8px #E40303; }
+    100% { box-shadow: 0 0 25px #750787; }
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px #000;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 5px #000;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 nav ul {
@@ -39,56 +58,102 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #FFED00; /* yellow highlight */
+nav ul li a:hover, .cta-button:hover {
+    background: #FFED00;
+    color: #750787;
 }
 
-main {
-    max-width: 900px;
-    margin: 2rem auto;
-    background-color: rgba(0, 0, 0, 0.5);
+.hero-section {
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 2rem 1rem 2rem 1rem;
+    border-radius: 15px;
+    margin: 2rem auto 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+}
+
+.hero-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.hero-section .cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    background: #FFED00;
+    color: #750787;
+    border: none;
+    padding: 0.7em 1.4em;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: background 0.3s, color 0.3s;
+}
+
+.card-section {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.20);
     padding: 2rem 3rem;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    margin: 2rem auto;
+    max-width: 700px;
     color: white;
+    text-align: center;
 }
 
-.section {
-    margin-bottom: 2rem;
+.card-section img.profile-image {
+    max-width: 160px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 0 12px rgba(0,0,0,0.8);
+    border: 3px solid #FFED00;
 }
 
-.section h2 {
+.card-section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-shadow: 1px 1px 3px #000;
 }
 
-.section p {
+.card-section p, .card-section ul, .card-section blockquote {
     font-size: 1.2rem;
-    line-height: 1.6;
+    line-height: 1.7;
     text-shadow: 1px 1px 2px #000;
+    margin-bottom: 1rem;
 }
 
-.profile-image {
-    max-width: 200px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 1rem auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: 1rem;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+.feature-card {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.17);
+    padding: 1.5rem 2rem;
+    width: 280px;
+    min-width: 220px;
+    margin-bottom: 1rem;
+    text-align: left;
+    transition: transform 0.2s;
 }
