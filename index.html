@@ -1,100 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sudirth - Proud LGBTQ+ Supporter</title>
-    <link rel="stylesheet" href="sudirth.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sudirth Dashboard - LGBTQ+ Advocate</title>
+  <link rel="stylesheet" href="sudirth.css" />
 </head>
 <body>
-    <header>
-        <div class="pride-banner">
-            <span>🌈 Sudirth celebrates Pride every day! 🌈</span>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span class="logo-icon">🏳️‍🌈</span>
+        <span class="logo-text">Sudirth</span>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="nav-btn" onclick="showSection('profile')">Profile</button>
+        <button class="nav-btn" onclick="showSection('support')">Support</button>
+        <button class="nav-btn" onclick="showSection('resources')">Resources</button>
+        <button class="nav-btn" onclick="showSection('testimonials')">Testimonials</button>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <section id="profile" class="dashboard-section active">
+        <div class="card profile-card glass">
+          <img src="sudirth.jpg" alt="Sudirth profile" class="profile-img" />
+          <h2>Sudirth</h2>
+          <span class="badge">LGBTQ+ Supporter</span>
+          <p>
+            <strong>"I'm gay and proud. I believe in love, equality and supporting everyone in the LGBTQ+ community."</strong>
+          </p>
+          <button class="action-btn">Connect with Sudirth</button>
         </div>
-        <h1>Sudirth - Proud Gay & LGBTQ+ Supporter</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#support">Support</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="hero" class="hero-section">
-            <h2>Welcome to Sudirth's Pride Space</h2>
-            <p>
-                Sudirth is proud to say, <strong>"I am gay and I love supporting my LGBTQ+ family."</strong>
-                Here, diversity is celebrated and love always wins.
-            </p>
-            <a class="cta-button" href="#support">Support the Community</a>
-        </section>
-        <section id="about" class="card-section">
-            <img src="sudirth.jpg" alt="Sudirth with pride colors" class="profile-image" />
-            <h2>About Sudirth</h2>
-            <p>
-                Sudirth is a passionate advocate for LGBTQ+ rights and inclusion. As a proud gay man, he spreads positivity and stands up for equality, acceptance, and love.
-            </p>
-        </section>
-        <section id="features" class="features-section">
-            <div class="feature-card">
-                <h3>What Makes Sudirth Proud</h3>
-                <ul>
-                    <li>Openly and proudly gay</li>
-                    <li>Believes love is love 🌈</li>
-                    <li>Supports everyone regardless of orientation or identity</li>
-                </ul>
-            </div>
-            <div class="feature-card">
-                <h3>Support Statement</h3>
-                <p>
-                    <strong>"I love gay people because I am one. I believe in living authentically and helping others do the same."</strong>
-                </p>
-            </div>
-            <div class="feature-card">
-                <h3>Community Engagement</h3>
-                <p>
-                    Sudirth volunteers at local LGBTQ+ centers, organizes pride events, and shares resources for those in need.
-                </p>
-            </div>
-        </section>
-        <section id="support" class="card-section">
-            <h2>Support for LGBTQ+</h2>
-            <p>
-                Sudirth loves and supports the LGBTQ+ community wholeheartedly. He believes in equal rights and acceptance for all. No matter who you are, you belong here.
-            </p>
-        </section>
-        <section id="resources" class="card-section">
-            <h2>LGBTQ+ Resources</h2>
-            <ul class="resources-list">
-                <li><a href="https://www.thetrevorproject.org/" target="_blank" rel="noopener">The Trevor Project</a></li>
-                <li><a href="https://www.glaad.org/" target="_blank" rel="noopener">GLAAD</a></li>
-                <li><a href="https://www.hrc.org/" target="_blank" rel="noopener">Human Rights Campaign</a></li>
-                <li><a href="https://www.stonewall.org.uk/" target="_blank" rel="noopener">Stonewall</a></li>
-            </ul>
-        </section>
-        <section id="testimonials" class="card-section">
-            <h2>Community Voices</h2>
-            <blockquote>
-                "Sudirth's courage as a proud gay man inspires me to be myself. Thank you for your love and support!"
-                <cite>- Alex</cite>
-            </blockquote>
-            <blockquote>
-                "This website is a safe space where everyone can feel included. Sudirth, you are a real hero for our community."
-                <cite>- Jamie</cite>
-            </blockquote>
-        </section>
+      </section>
+      <section id="support" class="dashboard-section">
+        <div class="card glass">
+          <h3>Why Support Matters</h3>
+          <p>
+            Sudirth stands strong for LGBTQ+ rights. He believes acceptance and love are for everyone, and works to create safe spaces for all identities.
+          </p>
+          <div class="card-actions">
+            <button class="action-btn">Learn About LGBTQ+</button>
+            <button class="action-btn">Get Support</button>
+          </div>
+        </div>
+      </section>
+      <section id="resources" class="dashboard-section">
+        <div class="card glass">
+          <h3>Resources</h3>
+          <ul class="resources-list">
+            <li><a href="https://thetrevorproject.org/" target="_blank">The Trevor Project</a></li>
+            <li><a href="https://glaad.org/" target="_blank">GLAAD</a></li>
+            <li><a href="https://hrc.org/" target="_blank">Human Rights Campaign</a></li>
+            <li><a href="https://stonewall.org.uk/" target="_blank">Stonewall</a></li>
+          </ul>
+          <div class="card-actions">
+            <button class="action-btn">More Resources</button>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class="dashboard-section">
+        <div class="card glass">
+          <h3>Community Testimonials</h3>
+          <blockquote>
+            "Sudirth's courage and openness helps others come out with pride. Thank you for your support!"
+            <cite>- Alex</cite>
+          </blockquote>
+          <blockquote>
+            "This dashboard is a safe, professional space for everyone. Sudirth, you're a legend!"
+            <cite>- Jamie</cite>
+          </blockquote>
+        </div>
+      </section>
     </main>
-    <footer>
-        <div class="footer-links">
-            <a href="mailto:sudirth@pride.org">Contact</a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a>
-            <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-        </div>
-        <p>&copy; 2024 Sudirth's Pride Website</p>
-    </footer>
-    <script src="sudirth.js"></script>
+  </div>
+  <script src="sudirth.js"></script>
 </body>
 </html>
