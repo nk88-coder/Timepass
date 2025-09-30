@@ -1,20 +1,20 @@
-// Tiny animation for the hero section headline and pride banner
+function showSection(sectionId) {
+  document.querySelectorAll('.dashboard-section').forEach(sec => {
+    sec.classList.remove('active');
+  });
+  document.getElementById(sectionId).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  // Highlight the right nav button
+  const sectionNames = ["profile", "support", "resources", "testimonials"];
+  const idx = sectionNames.indexOf(sectionId);
+  if (idx !== -1) {
+    document.querySelectorAll('.nav-btn')[idx].classList.add('active');
+  }
+}
+
+// Show profile by default on load
 document.addEventListener('DOMContentLoaded', () => {
-  const heroHeadline = document.querySelector('.hero-section h2');
-  if (heroHeadline) {
-    heroHeadline.style.opacity = 0;
-    setTimeout(() => {
-      heroHeadline.style.transition = 'opacity 1.2s';
-      heroHeadline.style.opacity = 1;
-    }, 400);
-  }
-  // Animate the pride banner text
-  const prideBanner = document.querySelector('.pride-banner span');
-  if (prideBanner) {
-    prideBanner.style.opacity = 0;
-    setTimeout(() => {
-      prideBanner.style.transition = 'opacity 1s';
-      prideBanner.style.opacity = 1;
-    }, 600);
-  }
+  showSection('profile');
 });
